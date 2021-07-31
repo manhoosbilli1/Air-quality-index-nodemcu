@@ -7,12 +7,12 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "VxbjbMoTOewMeVG8WZystVaQVD2vUgJI";
+char auth[] = "RzK6MeFktTZPaLTyN1xv-a2Iq6Hc0pFY";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Shoaib";
-char pass[] = "A0123456789";
+char ssid[] = "WC_to_No_Internet";  //apna net ki id likhe yahan
+char pass[] = "information0P"; //or yahan password  
 
 BlynkTimer timer;
 
@@ -57,9 +57,9 @@ void setup()
 
 void loop()
 {
-  if (Serial.available() > 0)
+  if (s.available() > 0)
   {
-    command = Serial.readString();
+    command = s.readString();
     Serial.println(command);
     decode(command);
     Serial.print(NO2);
